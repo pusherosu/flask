@@ -37,7 +37,7 @@
 
 	window.setInterval(function(){
 		$.ajax({
-			url: "http://192.168.0.15:5000/update_sensors",
+			url: "http://192.168.0.15:5000/update_sensors", 
 			dataType: "json",
 			type: "GET",
 			success: function(json){
@@ -47,7 +47,7 @@
 				console.log(json[json.length-1])
 			}
 		});
-	},10000);
+	},600000);
     </script>
 
 </head>
