@@ -53,7 +53,8 @@ def create_connection(db_file):
 		temp float,
 		moisture float,
 		humidity float,
-		friendly_name text
+		friendly_name text,
+		light float
 	)'''
 
 	try:
@@ -79,9 +80,10 @@ def update_db(data,conn):
 		data['moisture'],
 		data['humid'],
 		data['friendly_name']
+		data['light']
 	)
 
-	sql = '''INSERT INTO sensors (date,uuid,temp,moisture,humidity,friendly_name) VALUES (?,?,?,?,?,?)'''
+	sql = '''INSERT INTO sensors (date,uuid,temp,moisture,humidity,friendly_name,light) VALUES (?,?,?,?,?,?,?)'''
 
 	c = conn.cursor()
 	c.execute(sql,(values))
@@ -169,4 +171,4 @@ def set():
 # The app
 
 if __name__ == "__main__":
-	app.run(host='ec2-18-223-2-215.us-east-2.compute.amazonaws.com',debug=True)
+	app.run(host='0.0.0.0',debug=True)
