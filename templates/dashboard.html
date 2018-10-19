@@ -44,6 +44,7 @@
 				$("#sensor_temp").html(json[json.length-1]['temp'] + "&deg;C");
 				$("#sensor_humidity").html(json[json.length-1]['humidity'] + "%");
 				$("#sensor_moisture").html(json[json.length-1]['moisture'] );
+				$("#sensor_light").html(json[json.length-1]['light'] )
 				console.log(json[json.length-1])
 			}
 		});
@@ -471,7 +472,7 @@
                                     <i class="fa fa-lightbulb-o fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">{{sensor_data[0]['light']}}</div>
+                                    <div class="huge" id="sensor_light">{{sensor_data[0]['light']}}</div>
                                     <div>Ambient Light</div>
                                 </div>
                             </div>
