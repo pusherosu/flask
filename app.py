@@ -1,5 +1,7 @@
 #!flask/bin/python3
 
+# Last update 11/2/2018
+
 ########################################################################################################
 # Libraries
 
@@ -79,7 +81,7 @@ def update_db(data,conn):
 		data['temp'],
 		data['moisture'],
 		data['humid'],
-		data['friendly_name']
+		data['friendly_name'],
 		data['light']
 	)
 
